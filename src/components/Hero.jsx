@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Download, FileText, Mail, Github, Instagram, ArrowRight, MapPin } from 'lucide-react';
+import { FileText, Mail, Github, Instagram, ArrowRight, MapPin } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
 export default function Hero({ onOpenCvModal }) {
@@ -42,21 +42,12 @@ export default function Hero({ onOpenCvModal }) {
 
             {/* CTAs */}
             <div className="flex flex-wrap items-center gap-4 pt-2">
-              <a
-                href={personalInfo.cvPdf}
-                download="CV_AHMAD_RIZAL_BAIHAQI.pdf"
-                className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 text-base font-bold text-white bg-slate-900 hover:bg-blue-600 rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer"
-              >
-                <Download className="w-5 h-5" />
-                Unduh CV (PDF)
-              </a>
-
               <button
                 onClick={onOpenCvModal}
-                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 text-base font-semibold text-slate-700 bg-white border border-slate-300 hover:bg-slate-50 hover:border-slate-400 rounded-xl shadow-2xs transition-all cursor-pointer"
+                className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 text-base font-bold text-white bg-slate-900 hover:bg-blue-600 active:scale-[0.98] rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer"
               >
-                <FileText className="w-5 h-5 text-blue-600" />
-                Preview CV
+                <FileText className="w-5 h-5" />
+                Lihat CV Saya
               </button>
 
               <a

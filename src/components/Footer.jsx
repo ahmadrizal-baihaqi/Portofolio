@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUp, Github, Instagram, Mail, FileText } from 'lucide-react';
+import { ArrowUp, Github, Instagram, Mail, Download } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
 export default function Footer({ onOpenCvModal }) {
@@ -16,9 +16,11 @@ export default function Footer({ onOpenCvModal }) {
           {/* Col 1: Brand Info */}
           <div className="md:col-span-6 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-lg bg-blue-600 p-1.5 flex items-center justify-center">
-                <img src="/logo.png" alt="R Logo" className="w-full h-full object-contain filter invert" />
-              </div>
+              <img
+                src="/logo.png"
+                alt="R Logo"
+                className="w-9 h-9 object-contain"
+              />
               <span className="font-extrabold text-xl tracking-tight text-white">
                 {personalInfo.name}
               </span>
@@ -43,18 +45,12 @@ export default function Footer({ onOpenCvModal }) {
           <div className="md:col-span-3 space-y-4">
             <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider">Dokumen & Kontak</h4>
             <div className="space-y-2">
-              <button
-                onClick={onOpenCvModal}
-                className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold rounded-xl transition-colors cursor-pointer border border-slate-800"
-              >
-                <FileText className="w-4 h-4 text-blue-400" /> Preview CV PDF
-              </button>
               <a
                 href={personalInfo.cvPdf}
                 download="CV_AHMAD_RIZAL_BAIHAQI.pdf"
                 className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold rounded-xl transition-colors"
               >
-                Download CV PDF
+                <Download className="w-4 h-4" /> Unduh CV PDF
               </a>
             </div>
             

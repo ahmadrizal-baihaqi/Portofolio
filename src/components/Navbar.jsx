@@ -33,9 +33,11 @@ export default function Navbar({ onOpenCvModal }) {
           
           {/* Logo Konsep 08 & Name */}
           <a href="#" className="flex items-center gap-3 group focus:outline-none">
-            <div className="w-9 h-9 rounded-lg bg-slate-900 p-1.5 flex items-center justify-center transition-transform group-hover:scale-105">
-              <img src="/logo.png" alt="R Logo" className="w-full h-full object-contain" />
-            </div>
+            <img
+              src="/logo.png"
+              alt="R Logo"
+              className="w-9 h-9 object-contain transition-transform group-hover:scale-105"
+            />
             <div className="flex flex-col">
               <span className="font-bold text-slate-900 text-base tracking-tight leading-tight group-hover:text-blue-600 transition-colors">
                 {personalInfo.name}
@@ -59,34 +61,8 @@ export default function Navbar({ onOpenCvModal }) {
             ))}
           </nav>
 
-          {/* Action CTAs */}
-          <div className="hidden lg:flex items-center gap-3">
-            <button
-              onClick={onOpenCvModal}
-              className="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 hover:border-slate-300 rounded-xl transition-all cursor-pointer shadow-2xs"
-            >
-              <FileText className="w-4 h-4 text-blue-600" />
-              Preview CV
-            </button>
-            <a
-              href={personalInfo.cvPdf}
-              download="CV_AHMAD_RIZAL_BAIHAQI.pdf"
-              className="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-white bg-slate-900 hover:bg-blue-600 rounded-xl transition-all cursor-pointer shadow-xs"
-            >
-              <Download className="w-4 h-4" />
-              Unduh CV
-            </a>
-          </div>
-
           {/* Mobile Menu Button */}
           <div className="flex items-center gap-2 md:hidden">
-            <button
-              onClick={onOpenCvModal}
-              className="p-2 text-slate-700 hover:bg-slate-100 rounded-lg border border-slate-200"
-              title="Preview CV"
-            >
-              <FileText className="w-5 h-5 text-blue-600" />
-            </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 text-slate-700 hover:bg-slate-100 rounded-lg focus:outline-none"
